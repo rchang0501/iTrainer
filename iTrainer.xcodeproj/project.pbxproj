@@ -14,6 +14,7 @@
 		91CA779227C71252001EA08A /* iTrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA779127C71252001EA08A /* iTrainerTests.swift */; };
 		91CA779C27C71252001EA08A /* iTrainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA779B27C71252001EA08A /* iTrainerUITests.swift */; };
 		91CA779E27C71252001EA08A /* iTrainerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA779D27C71252001EA08A /* iTrainerUITestsLaunchTests.swift */; };
+		91CA77AC27C72658001EA08A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA77AB27C72658001EA08A /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		91CA779727C71252001EA08A /* iTrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTrainerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CA779B27C71252001EA08A /* iTrainerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTrainerUITests.swift; sourceTree = "<group>"; };
 		91CA779D27C71252001EA08A /* iTrainerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTrainerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		91CA77AB27C72658001EA08A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		91CA777F27C71251001EA08A /* iTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				91CA77AA27C7263D001EA08A /* Models */,
 				91CA778027C71251001EA08A /* iTrainerApp.swift */,
 				91CA778227C71251001EA08A /* MeetingView.swift */,
 				91CA778427C71252001EA08A /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				91CA779D27C71252001EA08A /* iTrainerUITestsLaunchTests.swift */,
 			);
 			path = iTrainerUITests;
+			sourceTree = "<group>";
+		};
+		91CA77AA27C7263D001EA08A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91CA77AB27C72658001EA08A /* Theme.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91CA77AC27C72658001EA08A /* Theme.swift in Sources */,
 				91CA778327C71251001EA08A /* MeetingView.swift in Sources */,
 				91CA778127C71251001EA08A /* iTrainerApp.swift in Sources */,
 			);
