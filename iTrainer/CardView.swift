@@ -13,11 +13,14 @@ struct CardView: View {
         VStack(alignment: .leading){
             Text(exercise.title)
                 .font(.headline)
+                .accessibilityAddTraits(.isHeader)
             Spacer()
             HStack{
                 Label("\(exercise.movements.count)", systemImage: "bolt.horizontal.fill")
+                    .accessibilityLabel("\(exercise.movements.count) exercises")
                 Spacer()
                 Label("\(exercise.lengthInMinutes)", systemImage: "clock.arrow.2.circlepath")
+                    .accessibilityLabel("\(exercise.lengthInMinutes) minute routine")
                     .labelStyle(.trailingIcon)
             }
             .font(.caption)
