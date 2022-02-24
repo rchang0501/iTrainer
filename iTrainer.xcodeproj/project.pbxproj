@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		91CA778127C71251001EA08A /* iTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778027C71251001EA08A /* iTrainerApp.swift */; };
-		91CA778327C71251001EA08A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778227C71251001EA08A /* ContentView.swift */; };
+		91CA778327C71251001EA08A /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778227C71251001EA08A /* MeetingView.swift */; };
 		91CA778527C71252001EA08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CA778427C71252001EA08A /* Assets.xcassets */; };
 		91CA778827C71252001EA08A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CA778727C71252001EA08A /* Preview Assets.xcassets */; };
 		91CA779227C71252001EA08A /* iTrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA779127C71252001EA08A /* iTrainerTests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		91CA777D27C71251001EA08A /* iTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CA778027C71251001EA08A /* iTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTrainerApp.swift; sourceTree = "<group>"; };
-		91CA778227C71251001EA08A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		91CA778227C71251001EA08A /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
 		91CA778427C71252001EA08A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91CA778727C71252001EA08A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		91CA778D27C71252001EA08A /* iTrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTrainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				91CA778027C71251001EA08A /* iTrainerApp.swift */,
-				91CA778227C71251001EA08A /* ContentView.swift */,
+				91CA778227C71251001EA08A /* MeetingView.swift */,
 				91CA778427C71252001EA08A /* Assets.xcassets */,
 				91CA778627C71252001EA08A /* Preview Content */,
 			);
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91CA778327C71251001EA08A /* ContentView.swift in Sources */,
+				91CA778327C71251001EA08A /* MeetingView.swift in Sources */,
 				91CA778127C71251001EA08A /* iTrainerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
