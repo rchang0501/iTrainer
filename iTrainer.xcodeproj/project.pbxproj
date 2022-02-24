@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		915A392127C738790036522F /* DailyExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392027C738790036522F /* DailyExercise.swift */; };
+		915A392327C73D6B0036522F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392227C73D6B0036522F /* CardView.swift */; };
 		91CA778127C71251001EA08A /* iTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778027C71251001EA08A /* iTrainerApp.swift */; };
 		91CA778327C71251001EA08A /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778227C71251001EA08A /* MeetingView.swift */; };
 		91CA778527C71252001EA08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CA778427C71252001EA08A /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		915A392027C738790036522F /* DailyExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExercise.swift; sourceTree = "<group>"; };
+		915A392227C73D6B0036522F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		91CA777D27C71251001EA08A /* iTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CA778027C71251001EA08A /* iTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTrainerApp.swift; sourceTree = "<group>"; };
 		91CA778227C71251001EA08A /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				91CA77AA27C7263D001EA08A /* Models */,
 				91CA778027C71251001EA08A /* iTrainerApp.swift */,
+				915A392227C73D6B0036522F /* CardView.swift */,
 				91CA778227C71251001EA08A /* MeetingView.swift */,
 				91CA778427C71252001EA08A /* Assets.xcassets */,
 				91CA778627C71252001EA08A /* Preview Content */,
@@ -275,6 +278,7 @@
 				915A392127C738790036522F /* DailyExercise.swift in Sources */,
 				91CA778327C71251001EA08A /* MeetingView.swift in Sources */,
 				91CA778127C71251001EA08A /* iTrainerApp.swift in Sources */,
+				915A392327C73D6B0036522F /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

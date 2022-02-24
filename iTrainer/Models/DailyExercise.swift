@@ -17,8 +17,8 @@ struct DailyExercise {
 extension DailyExercise {
     static let sampleData: [DailyExercise] =
     [
-        DailyExercise(title: "Morning Chest Routine", movements: ["Dumbell Press, Dumbell Fly, Barbell Press"], lengthInMinutes: 10, theme: .ocean)
-        DailyExercise(title: "Afternoon Arm Routine", movements: ["Perniated Curls, Tricept Dips, Extended Curl"], lengthInMinutes: 10, theme: .poppy)
-        DailyExercise(title: "Night Abs Routine", movements: ["Alternating Leg Raises, Boat Hold, Bicycles"], lengthInMinutes: 10, theme: .yellow)
+        DailyExercise(title: "Morning Chest Routine", movements: ["Dumbell Press", "Dumbell Fly", "Barbell Press"], lengthInMinutes: 10, theme: .ocean),
+        DailyExercise(title: "Afternoon Arm Routine", movements: ["Perniated Curls", "Tricept Dips", "Extended Curl"], lengthInMinutes: 10, theme: .poppy),
+        DailyExercise(title: "Night Abs Routine", movements: ["Alternating Leg Raises", "Boat Hold", "Bicycles"], lengthInMinutes: 10, theme: .yellow)
     ]
 }
