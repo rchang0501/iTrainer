@@ -18,7 +18,7 @@ struct CardView: View {
                 Label("\(exercise.movements.count)", systemImage: "bolt.horizontal.fill")
                 Spacer()
                 Label("\(exercise.lengthInMinutes)", systemImage: "clock.arrow.2.circlepath")
-                    .padding(.trailing, 20)
+                    .labelStyle(.trailingIcon)
             }
             .font(.caption)
         }
