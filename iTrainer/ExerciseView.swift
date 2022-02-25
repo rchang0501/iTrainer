@@ -12,7 +12,7 @@ struct ExerciseView: View {
     
     var body: some View {
         List {
-            ForEach(exercises, id: \.title) { exercise in // ( ... ) is the initilizer
+            ForEach(exercises) { exercise in // ( ... ) is the initilizer
                 CardView(exercise: exercise)
                     .listRowBackground(exercise.theme.mainColor)
             }
