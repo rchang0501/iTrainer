@@ -10,7 +10,7 @@ import Foundation
 struct DailyExercise: Identifiable { // identfiable protocal ensures uniqueness between elements
     let id: UUID // necessary for hte identfiable protocal
     var title: String
-    var movements: [String]
+    var movements: [Movement]
     var lengthInMinutes: Int
     var theme: Theme
     
@@ -18,9 +18,21 @@ struct DailyExercise: Identifiable { // identfiable protocal ensures uniqueness 
     init(id: UUID = UUID(), title: String, movements: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id
         self.title = title
-        self.movements = movements
+        self.movements = movements.map {Movement(name: $0)} // creates a new collection by iterating over and applying a transforamtion to each element
         self.lengthInMinutes = lengthInMinutes
         self.theme = theme
+    }
+}
+
+extension DailyExercise {
+    struct Movement: Identifiable {
+        let id: UUID
+        var name: String
+        
+        init(id: UUID = UUID(), name: String){
+            self.id = id
+            self.name = name
+        }
     }
 }
 

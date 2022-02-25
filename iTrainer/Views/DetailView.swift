@@ -34,6 +34,11 @@ struct DetailView: View {
                 }
                 .accessibilityElement(children: .combine)
             }
+            Section(header: Text("Movements")){
+                ForEach(exercise.movements) { movement in 
+                    Label("\(movement.name)", systemImage: "bolt.horizontal.fill")
+                }
+            }
         }
     }
 }
