@@ -13,7 +13,7 @@ struct ExerciseView: View {
     var body: some View {
         List {
             ForEach(exercises) { exercise in // ( ... ) is the initilizer
-                NavigationLink(destination: Text(exercise.title)){
+                NavigationLink(destination: DetailView(exercise: exercise)){
                     CardView(exercise: exercise)
                 }
                 .listRowBackground(exercise.theme.mainColor)
