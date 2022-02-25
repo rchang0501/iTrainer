@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9114088827C99972009026A7 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114088727C99972009026A7 /* DetailEditView.swift */; };
 		915A392127C738790036522F /* DailyExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392027C738790036522F /* DailyExercise.swift */; };
 		915A392327C73D6B0036522F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392227C73D6B0036522F /* CardView.swift */; };
 		915A392627C743BE0036522F /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392527C743BE0036522F /* TrailingIconLabelStyle.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9114088727C99972009026A7 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		915A392027C738790036522F /* DailyExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExercise.swift; sourceTree = "<group>"; };
 		915A392227C73D6B0036522F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		915A392527C743BE0036522F /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				915A392727C85FD70036522F /* ExerciseView.swift */,
 				91CA778227C71251001EA08A /* TimerView.swift */,
 				915A392A27C878390036522F /* DetailView.swift */,
+				9114088727C99972009026A7 /* DetailEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			files = (
 				91CA77AC27C72658001EA08A /* Theme.swift in Sources */,
 				915A392B27C878390036522F /* DetailView.swift in Sources */,
+				9114088827C99972009026A7 /* DetailEditView.swift in Sources */,
 				915A392627C743BE0036522F /* TrailingIconLabelStyle.swift in Sources */,
 				915A392127C738790036522F /* DailyExercise.swift in Sources */,
 				91CA778327C71251001EA08A /* TimerView.swift in Sources */,
