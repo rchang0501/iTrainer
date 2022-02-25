@@ -10,6 +10,8 @@ import SwiftUI
 struct DetailView: View {
     let exercise: DailyExercise
     
+    @State private var isPresentingEditView = false
+    
     var body: some View {
         List {
             // sections create visual distinctions in the list -> chunk groups and content for the view hierarchy
@@ -43,6 +45,34 @@ struct DetailView: View {
             }
         }
         .navigationTitle(exercise.title)
+        .toolbar {
+            Button("Edit"){
+                isPresentingEditView = true
+            }
+        }
+        // when isPresentingEditView changes to true, the app presents DetailEditView sing a modal sheet that partially covers the underlying content
+        // modal views remove the user from the main navigation flow of the app. Use modality for short, self-contained tasks
+        .sheet(isPresented: $isPresentingEditView) {
+            NavigationView {
+                DetailEditView()
+                    .navigationTitle(exercise.title)
+                // different tool bar is necessary to e.g. cancel the edit
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction){
+                            Button("Cancel"){
+                                isPresentingEditView = false
+                            }
+                        }
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction){
+                            Button("Done"){
+                                isPresentingEditView = false
+                            }
+                        }
+                    }
+            }
+        }
     }
 }
 
