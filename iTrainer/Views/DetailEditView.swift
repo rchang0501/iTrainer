@@ -20,8 +20,10 @@ struct DetailEditView: View {
                     Slider(value: $data.lengthInMinutes, in: 5...30, step: 1){
                         Text("Length")
                     }
+                    .accessibilityValue("\(Int(data.lengthInMinutes)) minutes")
                     Spacer()
                     Text("\(Int(data.lengthInMinutes)) minutes")
+                        .accessibilityHidden(true)
                 }
             }
             Section(header: Text("Movements")){
@@ -42,6 +44,7 @@ struct DetailEditView: View {
                         }
                     }) {
                         Image(systemName: "plus.app")
+                            .accessibilityLabel("Add Movement")
                     }
                     .disabled(newMovementName.isEmpty) // button only available if user types in a name 
                 }
