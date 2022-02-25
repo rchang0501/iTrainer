@@ -14,9 +14,11 @@ struct DetailView: View {
         List {
             // sections create visual distinctions in the list -> chunk groups and content for the view hierarchy
             Section(header: Text("Exercise Routine Info")){
-                Label("Start Exercise Routine", systemImage: "play.fill")
-                    .font(.headline)
-                    .foregroundColor(.accentColor)
+                NavigationLink(destination: TimerView()) {
+                    Label("Start Exercise Routine", systemImage: "play.fill")
+                        .font(.headline)
+                        .foregroundColor(.accentColor)
+                }
                 HStack {
                     Label("Lenght", systemImage: "clock.arrow.circlepath")
                     Spacer()
@@ -35,11 +37,12 @@ struct DetailView: View {
                 .accessibilityElement(children: .combine)
             }
             Section(header: Text("Movements")){
-                ForEach(exercise.movements) { movement in 
-                    Label("\(movement.name)", systemImage: "bolt.horizontal.fill")
+                ForEach(exercise.movements) { movement in
+                    Label("\(movement.name)", systemImage: "bolt.ring.closed")
                 }
             }
         }
+        .navigationTitle(exercise.title)
     }
 }
 

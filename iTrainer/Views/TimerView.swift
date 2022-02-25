@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MeetingView: View {
+struct TimerView: View {
     var body: some View {
         // contains the main components of the view
         VStack { // this stacks the view vertically
@@ -43,8 +43,8 @@ struct MeetingView: View {
     }
 }
 
-struct MeetingView_Previews: PreviewProvider {
+struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        MeetingView()
+        TimerView()
     }
 }

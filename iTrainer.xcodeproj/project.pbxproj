@@ -13,7 +13,7 @@
 		915A392827C85FD70036522F /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392727C85FD70036522F /* ExerciseView.swift */; };
 		915A392B27C878390036522F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392A27C878390036522F /* DetailView.swift */; };
 		91CA778127C71251001EA08A /* iTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778027C71251001EA08A /* iTrainerApp.swift */; };
-		91CA778327C71251001EA08A /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778227C71251001EA08A /* MeetingView.swift */; };
+		91CA778327C71251001EA08A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778227C71251001EA08A /* TimerView.swift */; };
 		91CA778527C71252001EA08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CA778427C71252001EA08A /* Assets.xcassets */; };
 		91CA778827C71252001EA08A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CA778727C71252001EA08A /* Preview Assets.xcassets */; };
 		91CA779227C71252001EA08A /* iTrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA779127C71252001EA08A /* iTrainerTests.swift */; };
@@ -47,7 +47,7 @@
 		915A392A27C878390036522F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		91CA777D27C71251001EA08A /* iTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CA778027C71251001EA08A /* iTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTrainerApp.swift; sourceTree = "<group>"; };
-		91CA778227C71251001EA08A /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
+		91CA778227C71251001EA08A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		91CA778427C71252001EA08A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91CA778727C71252001EA08A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		91CA778D27C71252001EA08A /* iTrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTrainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,7 +96,7 @@
 			children = (
 				915A392227C73D6B0036522F /* CardView.swift */,
 				915A392727C85FD70036522F /* ExerciseView.swift */,
-				91CA778227C71251001EA08A /* MeetingView.swift */,
+				91CA778227C71251001EA08A /* TimerView.swift */,
 				915A392A27C878390036522F /* DetailView.swift */,
 			);
 			path = Views;
@@ -303,7 +303,7 @@
 				915A392B27C878390036522F /* DetailView.swift in Sources */,
 				915A392627C743BE0036522F /* TrailingIconLabelStyle.swift in Sources */,
 				915A392127C738790036522F /* DailyExercise.swift in Sources */,
-				91CA778327C71251001EA08A /* MeetingView.swift in Sources */,
+				91CA778327C71251001EA08A /* TimerView.swift in Sources */,
 				91CA778127C71251001EA08A /* iTrainerApp.swift in Sources */,
 				915A392827C85FD70036522F /* ExerciseView.swift in Sources */,
 				915A392327C73D6B0036522F /* CardView.swift in Sources */,
