@@ -34,6 +34,17 @@ extension DailyExercise {
             self.name = name
         }
     }
+    
+    struct Data { // by nesting in an extention of DailyExercise, the Data struct remains distinct from the one in Foundation
+        var title: String = "" // assign defualt values so initializing a new Data struct can be done simply with Data() rather than passing fields
+        var movements: [Movement] = []
+        var lengthInMinutes: Double = 5
+        var theme: Theme = .seafoam
+    }
+    
+    var data: Data {
+        Data(title: title, movements: movements, lengthInMinutes: Double(lengthInMinutes), theme: theme)
+    }
 }
 
 extension DailyExercise {

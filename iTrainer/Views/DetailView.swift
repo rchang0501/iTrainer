@@ -20,7 +20,7 @@ struct DetailView: View {
                         .foregroundColor(.accentColor)
                 }
                 HStack {
-                    Label("Lenght", systemImage: "clock.arrow.circlepath")
+                    Label("Length", systemImage: "clock.arrow.circlepath")
                     Spacer()
                     Text("\(exercise.lengthInMinutes) minutes")
                 }
