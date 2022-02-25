@@ -37,4 +37,7 @@ enum Theme: String { // these themes are defined in the assets folder
     var mainColor: Color {
         Color(rawValue) // initializes a color from the asset catalog
     }
+    var name: String {
+        rawValue.capitalized
+    }
 }

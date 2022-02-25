@@ -11,7 +11,30 @@ struct DetailView: View {
     let exercise: DailyExercise
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            // sections create visual distinctions in the list -> chunk groups and content for the view hierarchy
+            Section(header: Text("Exercise Routine Info")){
+                Label("Start Exercise Routine", systemImage: "play.fill")
+                    .font(.headline)
+                    .foregroundColor(.accentColor)
+                HStack {
+                    Label("Lenght", systemImage: "clock.arrow.circlepath")
+                    Spacer()
+                    Text("\(exercise.lengthInMinutes) minutes")
+                }
+                .accessibilityElement(children: .combine)
+                HStack {
+                    Label("Theme", systemImage: "paintpalette")
+                    Spacer()
+                    Text("\(exercise.theme.name)")
+                        .padding(4)
+                        .foregroundColor(exercise.theme.accentColor)
+                        .background(exercise.theme.mainColor)
+                        .cornerRadius(4)
+                }
+                .accessibilityElement(children: .combine)
+            }
+        }
     }
 }
 
