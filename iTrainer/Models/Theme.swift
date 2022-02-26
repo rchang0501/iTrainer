@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Theme: String { // these themes are defined in the assets folder
+enum Theme: String, CaseIterable, Identifiable { // these themes are defined in the assets folder
     // enum is done by cases in swift
     case bubblegum
     case buttercup
@@ -39,5 +39,8 @@ enum Theme: String { // these themes are defined in the assets folder
     }
     var name: String {
         rawValue.capitalized
+    }
+    var id: String {
+        name 
     }
 }
