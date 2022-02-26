@@ -45,6 +45,13 @@ extension DailyExercise {
     var data: Data {
         Data(title: title, movements: movements, lengthInMinutes: Double(lengthInMinutes), theme: theme)
     }
+    
+    mutating func update(from data: Data) {
+        title = data.title
+        movements = data.movements
+        lengthInMinutes = Int(data.lengthInMinutes)
+        theme = data.theme
+    }
 }
 
 extension DailyExercise {

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DetailEditView: View {
     // @State property wrapper defines the source of truth for value types (like live data) --> you make it prive so it's only accessible in the views that you defiend them in
-    @State private var data = DailyExercise.Data()
+    // @Binding grabs a source of truth from another @State variable (in this case we'll be passing the to the DetailView's source of truth 
+    @Binding var data: DailyExercise.Data
     @State private var newMovementName: String = ""
     
     var body: some View {
@@ -56,6 +57,6 @@ struct DetailEditView: View {
 
 struct DetailEditView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailEditView()
+        DetailEditView(data: .constant(DailyExercise.sampleData[0].data))
     }
 }

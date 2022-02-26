@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct DetailView: View {
-    let exercise: DailyExercise
+    @Binding var exercise: DailyExercise
     
+    @State private var data = DailyExercise.Data()
     @State private var isPresentingEditView = false
     
     var body: some View {
@@ -48,26 +49,25 @@ struct DetailView: View {
         .toolbar {
             Button("Edit"){
                 isPresentingEditView = true
+                data = exercise.data // replaces template empty data with referenced data from exercise view 
             }
         }
         // when isPresentingEditView changes to true, the app presents DetailEditView sing a modal sheet that partially covers the underlying content
         // modal views remove the user from the main navigation flow of the app. Use modality for short, self-contained tasks
         .sheet(isPresented: $isPresentingEditView) {
             NavigationView {
-                DetailEditView()
+                DetailEditView(data: $data)
                     .navigationTitle(exercise.title)
-                // different tool bar is necessary to e.g. cancel the edit
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction){
                             Button("Cancel"){
                                 isPresentingEditView = false
                             }
                         }
-                    }
-                    .toolbar {
                         ToolbarItem(placement: .confirmationAction){
                             Button("Done"){
                                 isPresentingEditView = false
+                                exercise.update(from: data)
                             }
                         }
                     }
@@ -79,7 +79,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(exercise: DailyExercise.sampleData[0])
+            DetailView(exercise: .constant(DailyExercise.sampleData[0]))
         }
     }
 }
