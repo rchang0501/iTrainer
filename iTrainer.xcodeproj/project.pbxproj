@@ -19,6 +19,7 @@
 		919C193C27CEF59900C3B3E5 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 919C193B27CEF59900C3B3E5 /* ding.wav */; };
 		919C193E27CF119B00C3B3E5 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C193D27CF119B00C3B3E5 /* AVPlayer+Ding.swift */; };
 		919C194027CF1DD400C3B3E5 /* ExerciseProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C193F27CF1DD400C3B3E5 /* ExerciseProgressViewStyle.swift */; };
+		919C194227CF250600C3B3E5 /* TimerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C194127CF250600C3B3E5 /* TimerHeaderView.swift */; };
 		91CA778127C71251001EA08A /* iTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778027C71251001EA08A /* iTrainerApp.swift */; };
 		91CA778327C71251001EA08A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778227C71251001EA08A /* TimerView.swift */; };
 		91CA778527C71252001EA08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CA778427C71252001EA08A /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		919C193B27CEF59900C3B3E5 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ding.wav; path = ../../../../Downloads/ManagingStateAndLifeCycle/StartingProject/Scrumdinger/Resources/ding.wav; sourceTree = "<group>"; };
 		919C193D27CF119B00C3B3E5 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		919C193F27CF1DD400C3B3E5 /* ExerciseProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProgressViewStyle.swift; sourceTree = "<group>"; };
+		919C194127CF250600C3B3E5 /* TimerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHeaderView.swift; sourceTree = "<group>"; };
 		91CA777D27C71251001EA08A /* iTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CA778027C71251001EA08A /* iTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTrainerApp.swift; sourceTree = "<group>"; };
 		91CA778227C71251001EA08A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -100,8 +102,8 @@
 		915A392427C743AD0036522F /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				915A392527C743BE0036522F /* TrailingIconLabelStyle.swift */,
 				919C193F27CF1DD400C3B3E5 /* ExerciseProgressViewStyle.swift */,
+				915A392527C743BE0036522F /* TrailingIconLabelStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -110,12 +112,13 @@
 			isa = PBXGroup;
 			children = (
 				915A392227C73D6B0036522F /* CardView.swift */,
-				915A392727C85FD70036522F /* ExerciseView.swift */,
-				91CA778227C71251001EA08A /* TimerView.swift */,
-				915A392A27C878390036522F /* DetailView.swift */,
 				9114088727C99972009026A7 /* DetailEditView.swift */,
-				9114088927C9A4F0009026A7 /* ThemeView.swift */,
+				915A392A27C878390036522F /* DetailView.swift */,
+				915A392727C85FD70036522F /* ExerciseView.swift */,
 				9114088B27C9B8C8009026A7 /* ThemePicker.swift */,
+				9114088927C9A4F0009026A7 /* ThemeView.swift */,
+				919C194127CF250600C3B3E5 /* TimerHeaderView.swift */,
+				91CA778227C71251001EA08A /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,13 +154,13 @@
 		91CA777F27C71251001EA08A /* iTrainer */ = {
 			isa = PBXGroup;
 			children = (
-				915A392927C877EF0036522F /* Views */,
-				915A392427C743AD0036522F /* Styles */,
-				91CA77AA27C7263D001EA08A /* Models */,
-				91CA778027C71251001EA08A /* iTrainerApp.swift */,
 				91CA778427C71252001EA08A /* Assets.xcassets */,
+				91CA778027C71251001EA08A /* iTrainerApp.swift */,
+				91CA77AA27C7263D001EA08A /* Models */,
 				91CA778627C71252001EA08A /* Preview Content */,
 				919C193A27CEF57800C3B3E5 /* Resources */,
+				915A392427C743AD0036522F /* Styles */,
+				915A392927C877EF0036522F /* Views */,
 			);
 			path = iTrainer;
 			sourceTree = "<group>";
@@ -190,10 +193,10 @@
 		91CA77AA27C7263D001EA08A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				91CA77AB27C72658001EA08A /* Theme.swift */,
+				919C193D27CF119B00C3B3E5 /* AVPlayer+Ding.swift */,
 				915A392027C738790036522F /* DailyExercise.swift */,
 				919C193827CEE19000C3B3E5 /* ExerciseTimer.swift */,
-				919C193D27CF119B00C3B3E5 /* AVPlayer+Ding.swift */,
+				91CA77AB27C72658001EA08A /* Theme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				919C194227CF250600C3B3E5 /* TimerHeaderView.swift in Sources */,
 				9114088C27C9B8C8009026A7 /* ThemePicker.swift in Sources */,
 				91CA77AC27C72658001EA08A /* Theme.swift in Sources */,
 				915A392B27C878390036522F /* DetailView.swift in Sources */,
