@@ -52,7 +52,7 @@ struct DetailView: View {
                 data = exercise.data // replaces template empty data with referenced data from exercise view 
             }
         }
-        // when isPresentingEditView changes to true, the app presents DetailEditView sing a modal sheet that partially covers the underlying content
+        // when isPresentingEditView changes to true, the app presents DetailEditView a modal sheet that partially covers the underlying content
         // modal views remove the user from the main navigation flow of the app. Use modality for short, self-contained tasks
         .sheet(isPresented: $isPresentingEditView) {
             NavigationView {
