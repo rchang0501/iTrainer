@@ -10,6 +10,7 @@ import SwiftUI
 struct TimerHeaderView: View {
     let secondsElapsed: Int
     let secondsRemaining: Int
+    let theme: Theme
     
     private var totalSeconds: Int {
         secondsElapsed + secondsRemaining
@@ -25,6 +26,7 @@ struct TimerHeaderView: View {
     var body: some View {
         VStack{
             ProgressView(value: progress) //this is the progress bar
+                .progressViewStyle(ExerciseProgressViewStyle(theme: theme))
             HStack { // stacks things next to each other
                 VStack(alignment: .leading){ // override default alignment which is center
                     Text("Seconds Elapsed")
@@ -36,18 +38,20 @@ struct TimerHeaderView: View {
                     Text("Seconds Remaining")
                         .font(.caption)
                     Label("\(secondsRemaining)", systemImage: "hourglass.tophalf.fill")
+                        .labelStyle(.trailingIcon)
                 }
             }
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Time remaining")
         .accessibilityValue("\(minutesRemaining) minutes")
+        .padding([.top, .horizontal])
     }
 }
 
 struct TimerHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerHeaderView(secondsElapsed: 60, secondsRemaining: 180)
+        TimerHeaderView(secondsElapsed: 60, secondsRemaining: 180, theme: .ocean)
             .previewLayout(.sizeThatFits)
     }
 }
