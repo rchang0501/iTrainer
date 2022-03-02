@@ -17,7 +17,7 @@ struct DetailView: View {
         List {
             // sections create visual distinctions in the list -> chunk groups and content for the view hierarchy
             Section(header: Text("Exercise Routine Info")){
-                NavigationLink(destination: TimerView()) {
+                NavigationLink(destination: TimerView(exercise: $exercise)) {
                     Label("Start Exercise Routine", systemImage: "play.fill")
                         .font(.headline)
                         .foregroundColor(.accentColor)
