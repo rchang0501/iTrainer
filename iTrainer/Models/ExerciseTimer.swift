@@ -126,8 +126,11 @@ class ExerciseTimer: ObservableObject { // make class observable by using the Ob
         
         if secondsElapsedForMovement < secondsPerMovement {
             activeMovement = movementText
-        } else if secondsElapsedForMovement < (secondsPerMovement + secondsPerRest) {
+        } else if secondsElapsedForMovement < (secondsPerMovement + secondsPerRest) && secondsElapsedForMovement >= secondsPerMovement {
             activeMovement = restText
+            if (secondsElapsedForMovement == secondsPerMovement){
+                movementChangedAction?()
+            }
         } else if secondsElapsedForMovement >= (secondsPerMovement + secondsPerRest) {
             changeToMovement(at: movementIndex + 1)
             movementChangedAction?()

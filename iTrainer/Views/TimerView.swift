@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct TimerView: View {
     @Binding var exercise: DailyExercise
-    @StateObject var exerciseTimer = ExerciseTimer() // @StateObject sets this instance as the source of truth 
+    @StateObject var exerciseTimer = ExerciseTimer() // @StateObject sets this instance as the source of truth
+    
+    private var player: AVPlayer {AVPlayer.sharedDingPlayer} // sharedDingPlayer is an extension to AVPlayer defined in AVPlayer+Ding
     
     var body: some View {
         // contains the main components of the view
@@ -27,6 +30,10 @@ struct TimerView: View {
         .foregroundColor(exercise.theme.accentColor)
         .onAppear{ // lifecycle event for when the view appears on the screen
             exerciseTimer.reset(lengthInMinutes: exercise.lengthInMinutes, routineMovements: exercise.movements) // reset the timer to start a new session
+            exerciseTimer.movementChangedAction = { // this is triggered when either the movement changes or the rest time begins
+                player.seek(to: .zero) // ensures the file plays from the start
+                player.play() // plays the audio file 
+            }
             exerciseTimer.startExercise()
         }
         .onDisappear{
