@@ -32,6 +32,13 @@ struct TimerView: View {
         }
         .padding()
         .foregroundColor(exercise.theme.accentColor)
+        .onAppear{ // lifecycle event for when the view appears on the screen
+            exerciseTimer.reset(lengthInMinutes: exercise.lengthInMinutes, routineMovements: exercise.movements) // reset the timer to start a new session
+            exerciseTimer.startExercise()
+        }
+        .onDisappear{
+            exerciseTimer.stopExercise()
+        }
         .navigationBarTitleDisplayMode(.inline)
     }
 }
