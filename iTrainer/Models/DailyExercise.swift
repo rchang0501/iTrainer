@@ -57,8 +57,8 @@ extension DailyExercise {
 extension DailyExercise {
     static let sampleData: [DailyExercise] =
     [
-        DailyExercise(title: "Morning Chest Routine", movements: ["Dumbell Press", "Dumbell Fly", "Barbell Press"], lengthInMinutes: 10, theme: .ocean),
-        DailyExercise(title: "Afternoon Arm Routine", movements: ["Perniated Curls", "Tricept Dips", "Extended Curl"], lengthInMinutes: 10, theme: .poppy),
-        DailyExercise(title: "Night Abs Routine", movements: ["Alternating Leg Raises", "Boat Hold", "Bicycles"], lengthInMinutes: 10, theme: .yellow)
+        DailyExercise(title: "Morning Chest Routine", movements: ["Dumbell Press", "Dumbell Fly", "Diamond Push-Ups", "Barbell Press", "Dumbell Twists Press", "Dumbell Close Press", "Explosive Push-Ups", "Regular Push-Ups", "Dumbell Press", "Bench Dips"], lengthInMinutes: 10, theme: .ocean),
+        DailyExercise(title: "Afternoon Arm Routine", movements: ["Rear Delt Fly", "Lateral Raises", "Bench Dips", "Overhead Tricep Extension", "Skull Crushers", "Hammer Curls", "Pronated Curls", "Supinated Bicep Curls", "Pronated Wrist Curls", "Supinated Wrist Curls"], lengthInMinutes: 10, theme: .poppy),
+        DailyExercise(title: "Night Abs Routine", movements: ["Leg Raises", "Alternating Leg Raises", "Russian Twists", "Side Plank Raises",  "Plank Open and Close", "Plank Up and Down", "Plank Side to Side Twist", "Boat Hold", "Bicycles", "Reach-Ups"], lengthInMinutes: 10, theme: .yellow)
     ]
 }
