@@ -20,14 +20,7 @@ struct TimerView: View {
                 TimerHeaderView(secondsElapsed: exerciseTimer.secondsElapsed, secondsRemaining: exerciseTimer.secondsRemaining, theme: exercise.theme)
                 Circle()
                     .strokeBorder(lineWidth: 24)
-                HStack {
-                    Text("Movement 1 of 3")
-                    Spacer()
-                    Button(action: {}) {
-                        Image(systemName: "forward.fill")
-                    }
-                    .accessibilityLabel("Next Speaker")
-                }
+                TimerFooterView(movements: exerciseTimer.movements, skipAction: exerciseTimer.skipMovement)
             }
         }
         .padding()
