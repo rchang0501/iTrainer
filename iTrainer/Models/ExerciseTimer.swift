@@ -29,8 +29,9 @@ class ExerciseTimer: ObservableObject { // make class observable by using the Ob
     // routine length
     private(set) var lengthInMinutes: Int
     
-    // a closure that is executed when a new movement begins
+    // a closure (lambda) that is executed when a new movement begins
     var movementChangedAction: (() -> Void)?
+    var restChangedAction: (() -> Void)? 
     
     private var timer: Timer? // timer class info: https://www.hackingwithswift.com/articles/117/the-ultimate-guide-to-timer
     private var timerStopped = false
@@ -124,12 +125,12 @@ class ExerciseTimer: ObservableObject { // make class observable by using the Ob
         
         guard !timerStopped else { return }
         
-        if secondsElapsedForMovement < secondsPerMovement {
+        if secondsElapsedForMovement < (secondsPerMovement - 1) {
             activeMovement = movementText
-        } else if secondsElapsedForMovement < (secondsPerMovement + secondsPerRest) && secondsElapsedForMovement >= secondsPerMovement {
+        } else if secondsElapsedForMovement < (secondsPerMovement + secondsPerRest) && secondsElapsedForMovement >= (secondsPerMovement - 1) {
             activeMovement = restText
-            if (secondsElapsedForMovement == secondsPerMovement){
-                movementChangedAction?()
+            if (secondsElapsedForMovement == (secondsPerMovement - 1)){ // - 1 likely due to how the time is calculated
+                restChangedAction?()
             }
         } else if secondsElapsedForMovement >= (secondsPerMovement + secondsPerRest) {
             changeToMovement(at: movementIndex + 1)

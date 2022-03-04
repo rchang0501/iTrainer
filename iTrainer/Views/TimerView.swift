@@ -34,6 +34,10 @@ struct TimerView: View {
                 player.seek(to: .zero) // ensures the file plays from the start
                 player.play() // plays the audio file 
             }
+            exerciseTimer.restChangedAction = { // this is triggered when either the movement changes or the rest time begins
+                player.seek(to: .zero) // ensures the file plays from the start
+                player.play() // plays the audio file
+            }
             exerciseTimer.startExercise()
         }
         .onDisappear{
