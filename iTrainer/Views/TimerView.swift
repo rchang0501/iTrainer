@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct TimerView: View {
-    @Binding var exercise: DailyExercise
+    @Binding var exercise: ExerciseRoutine
     @StateObject var exerciseTimer = ExerciseTimer() // @StateObject sets this instance as the source of truth
     
     private var player: AVPlayer {AVPlayer.sharedDingPlayer} // sharedDingPlayer is an extension to AVPlayer defined in AVPlayer+Ding
@@ -49,6 +49,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(exercise: .constant(DailyExercise.sampleData[0]))
+        TimerView(exercise: .constant(ExerciseRoutine.sampleData[0]))
     }
 }

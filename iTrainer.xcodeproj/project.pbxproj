@@ -10,7 +10,7 @@
 		9114088827C99972009026A7 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114088727C99972009026A7 /* DetailEditView.swift */; };
 		9114088A27C9A4F0009026A7 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114088927C9A4F0009026A7 /* ThemeView.swift */; };
 		9114088C27C9B8C8009026A7 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114088B27C9B8C8009026A7 /* ThemePicker.swift */; };
-		915A392127C738790036522F /* DailyExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392027C738790036522F /* DailyExercise.swift */; };
+		915A392127C738790036522F /* ExerciseRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392027C738790036522F /* ExerciseRoutine.swift */; };
 		915A392327C73D6B0036522F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392227C73D6B0036522F /* CardView.swift */; };
 		915A392627C743BE0036522F /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392527C743BE0036522F /* TrailingIconLabelStyle.swift */; };
 		915A392827C85FD70036522F /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A392727C85FD70036522F /* ExerciseView.swift */; };
@@ -52,7 +52,7 @@
 		9114088727C99972009026A7 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		9114088927C9A4F0009026A7 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		9114088B27C9B8C8009026A7 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
-		915A392027C738790036522F /* DailyExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExercise.swift; sourceTree = "<group>"; };
+		915A392027C738790036522F /* ExerciseRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRoutine.swift; sourceTree = "<group>"; };
 		915A392227C73D6B0036522F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		915A392527C743BE0036522F /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 		915A392727C85FD70036522F /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				919C193D27CF119B00C3B3E5 /* AVPlayer+Ding.swift */,
-				915A392027C738790036522F /* DailyExercise.swift */,
+				915A392027C738790036522F /* ExerciseRoutine.swift */,
 				919C193827CEE19000C3B3E5 /* ExerciseTimer.swift */,
 				91CA77AB27C72658001EA08A /* Theme.swift */,
 			);
@@ -342,7 +342,7 @@
 				919C193E27CF119B00C3B3E5 /* AVPlayer+Ding.swift in Sources */,
 				9114088827C99972009026A7 /* DetailEditView.swift in Sources */,
 				915A392627C743BE0036522F /* TrailingIconLabelStyle.swift in Sources */,
-				915A392127C738790036522F /* DailyExercise.swift in Sources */,
+				915A392127C738790036522F /* ExerciseRoutine.swift in Sources */,
 				91CA778327C71251001EA08A /* TimerView.swift in Sources */,
 				919C193927CEE19000C3B3E5 /* ExerciseTimer.swift in Sources */,
 				919C194027CF1DD400C3B3E5 /* ExerciseProgressViewStyle.swift in Sources */,

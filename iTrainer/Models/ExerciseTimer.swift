@@ -10,7 +10,7 @@ import Foundation
 // diff between class and struct --> struct + enums are value types whereas classes are reference types. Value types are kind of like an instance of data whereas reference types always refer back to some object
 class ExerciseTimer: ObservableObject { // make class observable by using the ObservableObject protocol
     
-    // NOTE** ExerciseTimer Movement is not the exact same as the DailyExercise Movement
+    // NOTE** ExerciseTimer Movement is not the exact same as the ExerciseRoutine Movement
     
     // struct to keep track of exercise movements during the routine
     struct Movement: Identifiable {
@@ -62,7 +62,7 @@ class ExerciseTimer: ObservableObject { // make class observable by using the Ob
     private var startDate: Date?
     
     // Initailzie a new timer
-    init(lengthInMinutes: Int = 0, routineMovements: [DailyExercise.Movement] = []){
+    init(lengthInMinutes: Int = 0, routineMovements: [ExerciseRoutine.Movement] = []){
         self.lengthInMinutes = lengthInMinutes
         self.movements = routineMovements.movements
         secondsRemaining = lengthInSeconds
@@ -139,7 +139,7 @@ class ExerciseTimer: ObservableObject { // make class observable by using the Ob
     }
     
     // reset the timer with a new routine length and new movements
-    func reset(lengthInMinutes: Int, routineMovements: [DailyExercise.Movement]){
+    func reset(lengthInMinutes: Int, routineMovements: [ExerciseRoutine.Movement]){
         self.lengthInMinutes = lengthInMinutes
         self.movements = routineMovements.movements
         secondsRemaining = lengthInSeconds
@@ -148,14 +148,14 @@ class ExerciseTimer: ObservableObject { // make class observable by using the Ob
     
 } // class ExerciseTimer: ObservableObject
 
-extension DailyExercise {
-    // new timer using the routine length and movements in the DailyExercise
+extension ExerciseRoutine {
+    // new timer using the routine length and movements in the ExerciseRoutine
     var timer: ExerciseTimer {
         ExerciseTimer(lengthInMinutes: lengthInMinutes, routineMovements: movements)
     }
 }
 
-extension Array where Element == DailyExercise.Movement {
+extension Array where Element == ExerciseRoutine.Movement {
     var movements: [ExerciseTimer.Movement] {
         if isEmpty {
             return [ExerciseTimer.Movement(name: "Movement 1", isCompleted: false)]

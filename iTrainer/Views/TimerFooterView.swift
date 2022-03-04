@@ -47,7 +47,7 @@ struct TimerFooterView: View {
 
 struct TimerFooterView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerFooterView(movements: DailyExercise.sampleData[0].movements.movements, skipAction: {}) // the second .movements is an extension defined in the ExerciseTimer class (yes it's not great naming convention and should be changed)
+        TimerFooterView(movements: ExerciseRoutine.sampleData[0].movements.movements, skipAction: {}) // the second .movements is an extension defined in the ExerciseTimer class (yes it's not great naming convention and should be changed)
             .previewLayout(.sizeThatFits)
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardView: View {
-    let exercise: DailyExercise // new struct property
+    let exercise: ExerciseRoutine // new struct property
     var body: some View {
         VStack(alignment: .leading){
             Text(exercise.title)
@@ -31,7 +31,7 @@ struct CardView: View {
 }
 
 struct CardView_Previews: PreviewProvider {
-    static var exercise = DailyExercise.sampleData[0] // create a mock property to instantiate the card view
+    static var exercise = ExerciseRoutine.sampleData[0] // create a mock property to instantiate the card view
     static var previews: some View {
         CardView(exercise: exercise)
             .background(exercise.theme.mainColor) // this sets the bkg colour based on the theme define earlier

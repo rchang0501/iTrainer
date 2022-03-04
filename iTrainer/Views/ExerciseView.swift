@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ExerciseView: View {
-    @Binding var exercises: [DailyExercise]
+    @Binding var exercises: [ExerciseRoutine]
     @State private var isPresentingNewExerciseView: Bool = false
-    @State private var newExerciseData = DailyExercise.Data()
+    @State private var newExerciseData = ExerciseRoutine.Data()
     
     var body: some View {
         List {
@@ -37,15 +37,15 @@ struct ExerciseView: View {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Dismiss") {
                                 isPresentingNewExerciseView = false
-                                newExerciseData = DailyExercise.Data() // reset to prepare for next entry
+                                newExerciseData = ExerciseRoutine.Data() // reset to prepare for next entry
                             }
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Add") {
-                                let newData = DailyExercise(data: newExerciseData) // createe a new DailyExercise object, initializing with the modified data
+                                let newData = ExerciseRoutine(data: newExerciseData) // createe a new ExerciseRoutine object, initializing with the modified data
                                 exercises.append(newData) // add the new entry to the array of exercises
                                 isPresentingNewExerciseView = false
-                                newExerciseData = DailyExercise.Data() // reset to prepare for next entry
+                                newExerciseData = ExerciseRoutine.Data() // reset to prepare for next entry
                             }
                         }
                     }
@@ -57,7 +57,7 @@ struct ExerciseView: View {
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView { // adding this shows titles and bar buttons on the canvas
-            ExerciseView(exercises: .constant(DailyExercise.sampleData)) // initialize with class parameters
+            ExerciseView(exercises: .constant(ExerciseRoutine.sampleData)) // initialize with class parameters
         }
     }
 }

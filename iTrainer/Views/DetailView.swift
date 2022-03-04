@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct DetailView: View {
-    @Binding var exercise: DailyExercise
+    @Binding var exercise: ExerciseRoutine
     
-    @State private var data = DailyExercise.Data()
+    @State private var data = ExerciseRoutine.Data()
     @State private var isPresentingEditView = false
     
     var body: some View {
@@ -79,7 +79,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(exercise: .constant(DailyExercise.sampleData[0]))
+            DetailView(exercise: .constant(ExerciseRoutine.sampleData[0]))
         }
     }
 }
