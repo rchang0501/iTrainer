@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ExerciseView: View {
     @Binding var exercises: [DailyExercise]
+    @State private var isPresentingNewExerciseView: Bool = false
+    @State private var newExerciseData = DailyExercise.Data()
     
     var body: some View {
         List {
@@ -19,12 +21,35 @@ struct ExerciseView: View {
                 .listRowBackground(exercise.theme.mainColor)
             }
         }
-        .navigationTitle("Daily Exercises")
+        .navigationTitle("Exercise Routines")
         .toolbar {
-            Button(action: {}) {
+            Button(action: {
+                isPresentingNewExerciseView = true // trigger the modal sheet to show 
+            }) {
                 Image(systemName: "plus.circle")
             }
             .accessibilityLabel("New Exercise")
+        }
+        .sheet(isPresented: $isPresentingNewExerciseView){ // modal sheet that will show the create new exercise view
+            NavigationView {
+                DetailEditView(data: $newExerciseData)
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("Dismiss") {
+                                isPresentingNewExerciseView = false
+                                newExerciseData = DailyExercise.Data() // reset to prepare for next entry
+                            }
+                        }
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Add") {
+                                let newData = DailyExercise(data: newExerciseData) // createe a new DailyExercise object, initializing with the modified data
+                                exercises.append(newData) // add the new entry to the array of exercises
+                                isPresentingNewExerciseView = false
+                                newExerciseData = DailyExercise.Data() // reset to prepare for next entry
+                            }
+                        }
+                    }
+            }
         }
     }
 }
