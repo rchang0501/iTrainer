@@ -39,7 +39,7 @@ extension ExerciseRoutine {
         var title: String = "" // assign defualt values so initializing a new Data struct can be done simply with Data() rather than passing fields
         var movements: [Movement] = []
         var lengthInMinutes: Double = 5
-        var theme: Theme = .seafoam
+        var theme: Theme = .lavender
     }
     
     var data: Data {
