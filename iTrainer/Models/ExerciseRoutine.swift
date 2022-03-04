@@ -13,6 +13,7 @@ struct ExerciseRoutine: Identifiable { // identfiable protocal ensures uniquenes
     var movements: [Movement]
     var lengthInMinutes: Int
     var theme: Theme
+    var history: [History] = []
     
     // assigned default value to id (id: UUID = UUID()) -> enables you to omit the parameter during initialization
     init(id: UUID = UUID(), title: String, movements: [String], lengthInMinutes: Int, theme: Theme) {

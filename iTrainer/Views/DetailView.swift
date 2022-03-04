@@ -44,6 +44,17 @@ struct DetailView: View {
                     Label("\(movement.name)", systemImage: "bolt.ring.closed")
                 }
             }
+            Section(header: Text("History")){
+                if exercise.history.isEmpty {
+                    Label("No history yet", systemImage: "calendar.badge.exclamationmark")
+                }
+                ForEach(exercise.history) { history in
+                    HStack {
+                        Image(systemName: "calendar")
+                        Text(history.date, style: .date)
+                    }
+                }
+            }
         }
         .navigationTitle(exercise.title)
         .toolbar {

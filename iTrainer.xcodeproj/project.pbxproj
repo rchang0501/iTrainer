@@ -21,6 +21,7 @@
 		919C194027CF1DD400C3B3E5 /* ExerciseProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C193F27CF1DD400C3B3E5 /* ExerciseProgressViewStyle.swift */; };
 		919C194227CF250600C3B3E5 /* TimerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C194127CF250600C3B3E5 /* TimerHeaderView.swift */; };
 		919C194427D0412B00C3B3E5 /* TimerFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C194327D0412B00C3B3E5 /* TimerFooterView.swift */; };
+		91AA826B27D1BDDC000791CC /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AA826A27D1BDDC000791CC /* History.swift */; };
 		91CA778127C71251001EA08A /* iTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778027C71251001EA08A /* iTrainerApp.swift */; };
 		91CA778327C71251001EA08A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA778227C71251001EA08A /* TimerView.swift */; };
 		91CA778527C71252001EA08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CA778427C71252001EA08A /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		919C193F27CF1DD400C3B3E5 /* ExerciseProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProgressViewStyle.swift; sourceTree = "<group>"; };
 		919C194127CF250600C3B3E5 /* TimerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHeaderView.swift; sourceTree = "<group>"; };
 		919C194327D0412B00C3B3E5 /* TimerFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFooterView.swift; sourceTree = "<group>"; };
+		91AA826A27D1BDDC000791CC /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		91CA777D27C71251001EA08A /* iTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CA778027C71251001EA08A /* iTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTrainerApp.swift; sourceTree = "<group>"; };
 		91CA778227C71251001EA08A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				915A392027C738790036522F /* ExerciseRoutine.swift */,
 				919C193827CEE19000C3B3E5 /* ExerciseTimer.swift */,
 				91CA77AB27C72658001EA08A /* Theme.swift */,
+				91AA826A27D1BDDC000791CC /* History.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91AA826B27D1BDDC000791CC /* History.swift in Sources */,
 				919C194227CF250600C3B3E5 /* TimerHeaderView.swift in Sources */,
 				9114088C27C9B8C8009026A7 /* ThemePicker.swift in Sources */,
 				91CA77AC27C72658001EA08A /* Theme.swift in Sources */,

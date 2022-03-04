@@ -42,6 +42,8 @@ struct TimerView: View {
         }
         .onDisappear{
             exerciseTimer.stopExercise()
+            let newHistory = History(movements: exercise.movements, lengthInMinutes: exercise.timer.secondsElapsed / 60)
+            exercise.history.insert(newHistory, at: 0)
         }
         .navigationBarTitleDisplayMode(.inline)
     }
