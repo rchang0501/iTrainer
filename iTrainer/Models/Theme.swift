@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Theme: String, CaseIterable, Identifiable { // these themes are defined in the assets folder
+enum Theme: String, CaseIterable, Identifiable, Codable { // these themes are defined in the assets folder
     // enum is done by cases in swift
     case bubblegum
     case buttercup

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ExerciseRoutine: Identifiable { // identfiable protocal ensures uniqueness between elements
+struct ExerciseRoutine: Identifiable, Codable { // identfiable protocal ensures uniqueness between elements
     let id: UUID // necessary for hte identfiable protocal
     var title: String
     var movements: [Movement]
@@ -26,7 +26,7 @@ struct ExerciseRoutine: Identifiable { // identfiable protocal ensures uniquenes
 }
 
 extension ExerciseRoutine {
-    struct Movement: Identifiable {
+    struct Movement: Identifiable, Codable {
         let id: UUID
         var name: String
         
