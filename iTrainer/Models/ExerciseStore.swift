@@ -24,7 +24,7 @@ class ExerciseStore: ObservableObject { // ObservableObject is a class protocal 
         // asynchronous block on a background queue (like coroutine)
         // DispatchQueues are fist-in first-out (FIFO) for which our app can submit tasks (means requests are processed in the order in which they arrive)
         // background tasks have the lowest priority of all tasks
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .background).async { // this is on background queue
             do {
                 let fileURL = try fileURL() // contains the file URL
                 guard let file = try? FileHandle(forReadingFrom: fileURL) else { // prevent errors from reading nil file
@@ -39,7 +39,26 @@ class ExerciseStore: ObservableObject { // ObservableObject is a class protocal 
                 }
             } catch {
                 DispatchQueue.main.async {
-                    completion(.failure(error)) // show error if there is trouble reading the file 
+                    completion(.failure(error)) // show error if there is trouble reading the file
+                }
+            }
+        }
+    }
+    
+    // static function to save the data to the user's file system
+    // acception a completion handler that accepts the number of saved exercises or throws an error
+    static func save(exercises: [ExerciseRoutine], completion: @escaping (Result<Int, Error>) -> Void ){
+        DispatchQueue.global(qos: .background).async { // do these tasks on the background queue
+            do {
+                let data = try JSONEncoder().encode(exercises) // encode the exercises in the app to JSON
+                let outfile = try fileURL() // url for the file being outputed
+                try data.write(to: outfile) // write the encoded data to the file
+                DispatchQueue.main.async {
+                    completion(.success(exercises.count)) // pass the number of exercises successfully added to the file to the completion handler
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error)) // pass error to completion handler is something went wrong with writting the data 
                 }
             }
         }
