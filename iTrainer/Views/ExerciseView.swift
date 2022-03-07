@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExerciseView: View {
     @Binding var exercises: [ExerciseRoutine]
+    @Environment(\.scenePhase) private var scenePhase // scenePhase indicates the current operational state of the app's Scene instances e.g. can tell you when the Scene is inactive 
     @State private var isPresentingNewExerciseView: Bool = false
     @State private var newExerciseData = ExerciseRoutine.Data()
     
