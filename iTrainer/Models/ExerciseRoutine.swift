@@ -39,7 +39,7 @@ extension ExerciseRoutine {
     struct Data { // by nesting in an extention of ExerciseRoutine, the Data struct remains distinct from the one in Foundation
         var title: String = "" // assign defualt values so initializing a new Data struct can be done simply with Data() rather than passing fields
         var movements: [Movement] = []
-        var lengthInMinutes: Double = 5
+        var lengthInMinutes: Double = 10
         var theme: Theme = .lavender
     }
     

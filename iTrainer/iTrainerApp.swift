@@ -14,8 +14,14 @@ struct iTrainerApp: App { // use the app protocol to create an app
     
     var body: some Scene { // app property returns a scene that contains a view hierarchy representing the primary UI for the app
         WindowGroup { // window group is one of the primitive scenes swiftui provides --> in iOS the views put in the window group scene builder are presented in a window that fills the entire screen
-            NavigationView { // navigation container enables navigation of a stack of views in a hierarchy 
-                ExerciseView(exercises: $store.exercises)
+            NavigationView { // navigation container enables navigation of a stack of views in a hierarchy
+                ExerciseView(exercises: $store.exercises) {
+                    ExerciseStore.save(exercises: store.exercises) { result in // pass the saveAction closure to the List view in ExerciseView
+                        if case .failure(let error) = result { // remember result is a lambda for the second parameter of save
+                            fatalError(error.localizedDescription)
+                        }
+                    }
+                }
             }
             .onAppear { // lifecycle event for when a view appears on the screen
                 ExerciseStore.load { result in // call the load static method in exercise store to get all the exercise routines
@@ -23,10 +29,11 @@ struct iTrainerApp: App { // use the app protocol to create an app
                     case .failure(let error):
                         fatalError(error.localizedDescription) // when the result is an error throw the error
                     case .success(let exercises):
-                        store.exercises = exercises // when the result is an array of ExerciseRoutine (successful) set the returned value to the soruce of truth 
+                        store.exercises = exercises // when the result is an array of ExerciseRoutine (successful) set the returned value to the soruce of truth
                     }
                 }
             }
         }
     }
 }
+
