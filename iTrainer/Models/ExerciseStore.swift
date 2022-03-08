@@ -17,6 +17,24 @@ class ExerciseStore: ObservableObject { // ObservableObject is a class protocal 
             .appendingPathComponent("exercises.data") // returns the URL of a file named exercises.data
     }
     
+    // secondary load fucntion with more modern async handling
+    static func load() async throws -> [ExerciseRoutine] {
+        // function that connects async code and exiting callback-based APIs
+        // this suspends the load function then passes a continuation into a closure that we provide
+        // a continuation is value that represents e code after an awiated function
+        try await withCheckedThrowingContinuation { continuation in
+            // this is the old load function with a completion of either a [ExerciseRoutine] or Error
+            load { result in // result is a single type that represents the outcome of an operation (an array or error in this case)
+                switch result { // to handle the different cases of result
+                case .failure(let error):
+                    continuation.resume(throwing: error) // cotinuations have methods for returning values (of result) .resume is one of them
+                case .success(let exercises):
+                    continuation.resume(returning: exercises)
+                }
+            }
+        }
+    }
+    
     // static func to load the data
     // Result is a single type that represents the outcome of an operation - whether it is a success or failure
     // load func accepts a completion closure that it call asychronously with either an array of ExerciseRoutine or an error
