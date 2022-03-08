@@ -19,7 +19,7 @@ class ExerciseStore: ObservableObject { // ObservableObject is a class protocal 
     
     // secondary load fucntion with more modern async handling
     static func load() async throws -> [ExerciseRoutine] {
-        // function that connects async code and exiting callback-based APIs
+        // withCheckedThrowingContinuation is a function that connects async code and exiting callback-based APIs
         // this suspends the load function then passes a continuation into a closure that we provide
         // a continuation is value that represents a code after an awiated function
         try await withCheckedThrowingContinuation { continuation in
