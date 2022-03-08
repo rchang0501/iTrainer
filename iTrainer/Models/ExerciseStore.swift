@@ -17,7 +17,7 @@ class ExerciseStore: ObservableObject { // ObservableObject is a class protocal 
             .appendingPathComponent("exercises.data") // returns the URL of a file named exercises.data
     }
     
-    // secondary load fucntion with more modern async handling
+    // new load fucntion that warps the legacy load function in more modern async func handling 
     static func load() async throws -> [ExerciseRoutine] {
         // withCheckedThrowingContinuation is a function that connects async code and exiting callback-based APIs
         // this suspends the load function then passes a continuation into a closure that we provide
