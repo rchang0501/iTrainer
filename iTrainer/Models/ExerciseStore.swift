@@ -21,7 +21,7 @@ class ExerciseStore: ObservableObject { // ObservableObject is a class protocal 
     static func load() async throws -> [ExerciseRoutine] {
         // function that connects async code and exiting callback-based APIs
         // this suspends the load function then passes a continuation into a closure that we provide
-        // a continuation is value that represents e code after an awiated function
+        // a continuation is value that represents a code after an awiated function
         try await withCheckedThrowingContinuation { continuation in
             // this is the old load function with a completion of either a [ExerciseRoutine] or Error
             load { result in // result is a single type that represents the outcome of an operation (an array or error in this case)
@@ -58,6 +58,20 @@ class ExerciseStore: ObservableObject { // ObservableObject is a class protocal 
             } catch {
                 DispatchQueue.main.async {
                     completion(.failure(error)) // show error if there is trouble reading the file
+                }
+            }
+        }
+    }
+    
+    @discardableResult // disables warnings about the unused return value (ie when there is an error an int isn't returned)
+    static func save(exercises: [ExerciseRoutine]) async throws -> Int {
+        try await withCheckedThrowingContinuation { continuation in
+            save(exercises: exercises) { result in
+                switch result {
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                case .success(let exercisesSaved):
+                    continuation.resume(returning: exercisesSaved)
                 }
             }
         }
