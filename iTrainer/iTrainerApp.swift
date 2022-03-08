@@ -16,7 +16,7 @@ struct iTrainerApp: App { // use the app protocol to create an app
         WindowGroup { // window group is one of the primitive scenes swiftui provides --> in iOS the views put in the window group scene builder are presented in a window that fills the entire screen
             NavigationView { // navigation container enables navigation of a stack of views in a hierarchy
                 ExerciseView(exercises: $store.exercises) {
-                    
+                    // this is the second parameter of ExerciseView (saveAction: ) and is structured like this b/c it's a lambda 
                     // Task creates an async context in which we can call the async function of save
                     Task {
                         do {
