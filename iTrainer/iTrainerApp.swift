@@ -11,6 +11,7 @@ import SwiftUI
 struct iTrainerApp: App { // use the app protocol to create an app
     // @State private var exercises = ExerciseRoutine.sampleData // root source of truth for all the data being passed
     @StateObject private var store = ExerciseStore() // @StateObject creates and initializes a single instance of an observed object for each instance of a structure that declares it (source of truth)
+    @State private var errorWrapper: ErrorWrapper?
     
     var body: some Scene { // app property returns a scene that contains a view hierarchy representing the primary UI for the app
         WindowGroup { // window group is one of the primitive scenes swiftui provides --> in iOS the views put in the window group scene builder are presented in a window that fills the entire screen
@@ -22,7 +23,7 @@ struct iTrainerApp: App { // use the app protocol to create an app
                         do {
                             try await ExerciseStore.save(exercises: store.exercises) // can ignore the return value because of the discardableResult annotation on the save function in ExerciseStore
                         } catch {
-                            fatalError("Error saving exercises")
+                            errorWrapper = ErrorWrapper(error: error, guidance: "Error: Please try again later.") // store the error and add a error message to the errorWrapper struct
                         }
                     }
                     
@@ -41,7 +42,7 @@ struct iTrainerApp: App { // use the app protocol to create an app
                 do {
                     store.exercises = try await ExerciseStore.load() // call the async load function to grab the exercises stores in the app's file manager
                 } catch {
-                    fatalError("Error loading exercises") // throw an error if there is a failure 
+                    errorWrapper = ErrorWrapper(error: error, guidance: "iTrainer will load sample data and continue.")
                 }
             }
             
@@ -56,6 +57,11 @@ struct iTrainerApp: App { // use the app protocol to create an app
                     }
                 }
             } */
+            .sheet(item: $errorWrapper, onDismiss: { // modal sheet (temp mini drawer ish screen) overlay on the NavigationView
+                store.exercises = ExerciseRoutine.sampleData // load sample data when there is an issue loading the data from the data store 
+            }) { wrapper in // refers to the errorWrapper
+                ErrorView(errorWrapper: wrapper) // pass in the errorWrapper
+            }
         }
     }
 }
