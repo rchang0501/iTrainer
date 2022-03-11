@@ -18,6 +18,7 @@
 		915FD23827D59B3500FACF26 /* ExerciseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915FD23727D59B3500FACF26 /* ExerciseStore.swift */; };
 		915FD23A27D8312200FACF26 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915FD23927D8312200FACF26 /* ErrorWrapper.swift */; };
 		915FD23C27D833C100FACF26 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915FD23B27D833C100FACF26 /* ErrorView.swift */; };
+		915FD23E27DAE6B100FACF26 /* TimerCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915FD23D27DAE6B100FACF26 /* TimerCircleView.swift */; };
 		919C193927CEE19000C3B3E5 /* ExerciseTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C193827CEE19000C3B3E5 /* ExerciseTimer.swift */; };
 		919C193C27CEF59900C3B3E5 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 919C193B27CEF59900C3B3E5 /* ding.wav */; };
 		919C193E27CF119B00C3B3E5 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C193D27CF119B00C3B3E5 /* AVPlayer+Ding.swift */; };
@@ -64,6 +65,7 @@
 		915FD23727D59B3500FACF26 /* ExerciseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStore.swift; sourceTree = "<group>"; };
 		915FD23927D8312200FACF26 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
 		915FD23B27D833C100FACF26 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		915FD23D27DAE6B100FACF26 /* TimerCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCircleView.swift; sourceTree = "<group>"; };
 		919C193827CEE19000C3B3E5 /* ExerciseTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTimer.swift; sourceTree = "<group>"; };
 		919C193B27CEF59900C3B3E5 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ding.wav; path = ../../../../Downloads/ManagingStateAndLifeCycle/StartingProject/Scrumdinger/Resources/ding.wav; sourceTree = "<group>"; };
 		919C193D27CF119B00C3B3E5 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				9114088B27C9B8C8009026A7 /* ThemePicker.swift */,
 				9114088927C9A4F0009026A7 /* ThemeView.swift */,
 				919C194127CF250600C3B3E5 /* TimerHeaderView.swift */,
+				915FD23D27DAE6B100FACF26 /* TimerCircleView.swift */,
 				919C194327D0412B00C3B3E5 /* TimerFooterView.swift */,
 				91CA778227C71251001EA08A /* TimerView.swift */,
 				915FD23B27D833C100FACF26 /* ErrorView.swift */,
@@ -353,6 +356,7 @@
 				91CA77AC27C72658001EA08A /* Theme.swift in Sources */,
 				915A392B27C878390036522F /* DetailView.swift in Sources */,
 				919C193E27CF119B00C3B3E5 /* AVPlayer+Ding.swift in Sources */,
+				915FD23E27DAE6B100FACF26 /* TimerCircleView.swift in Sources */,
 				9114088827C99972009026A7 /* DetailEditView.swift in Sources */,
 				915A392627C743BE0036522F /* TrailingIconLabelStyle.swift in Sources */,
 				915A392127C738790036522F /* ExerciseRoutine.swift in Sources */,

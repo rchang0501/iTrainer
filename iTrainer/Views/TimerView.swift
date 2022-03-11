@@ -21,8 +21,7 @@ struct TimerView: View {
                 .fill(exercise.theme.mainColor)
             VStack { // this stacks the view vertically
                 TimerHeaderView(secondsElapsed: exerciseTimer.secondsElapsed, secondsRemaining: exerciseTimer.secondsRemaining, theme: exercise.theme)
-                Circle()
-                    .strokeBorder(lineWidth: 24)
+                TimerCircleView(movements: exerciseTimer.movements, theme: exercise.theme)
                 TimerFooterView(movements: exerciseTimer.movements, skipAction: exerciseTimer.skipMovement)
             }
         }
@@ -51,6 +50,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(exercise: .constant(ExerciseRoutine.sampleData[0]))
+        TimerView(exercise: .constant(ExerciseRoutine.sampleData[1]))
     }
 }

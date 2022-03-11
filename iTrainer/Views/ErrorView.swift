@@ -17,7 +17,7 @@ struct ErrorView: View {
                 Text("An Error Has Occured")
                     .font(.title)
                     .padding(.bottom)
-                Text(errorWrapper.error.localizedDescription) // Error provides a localized description key which describes the error that occurred 
+                Text(errorWrapper.error.localizedDescription) // Error provides a localized description key which describes the error that occurred l
                     .font(.headline)
                 Text(errorWrapper.guidance)
                     .font(.caption)
