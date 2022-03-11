@@ -30,6 +30,17 @@ struct TimerCircleView: View {
                 .accessibilityElement(children: .combine) // ensures elemnts in the VStack are considered a single one
                 .foregroundStyle(theme.accentColor)
             }
+            .overlay{
+                ForEach(movements) { movement in
+                    // finds the index of the movement that just completed (to know to draw the arc)
+                    if movement.isCompleted, let index = movements.firstIndex(where: {$0.id == movement.id }){
+                        MovementArc(movementIndex: index, totalMovements: movements.count) // create the MovementArc shape
+                            .rotation(Angle(degrees: -90)) // apply rotation to set the 0 degree angle to the 12 o'clock position
+                            .stroke(theme.mainColor, lineWidth: 12) // this is the colored portion of the arc
+                    }
+                }
+            }
+            .padding(.horizontal)
     }
 }
 
