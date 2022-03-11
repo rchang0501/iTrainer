@@ -50,6 +50,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(exercise: .constant(ExerciseRoutine.sampleData[1]))
+        TimerView(exercise: .constant(ExerciseRoutine.sampleData[0]))
     }
 }
