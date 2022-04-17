@@ -1,5 +1,5 @@
 # iTrainer
-H.I.I.T. workout iOS app. Leverages SwiftUI and modern Swift development practices. Utilizes SwiftUI components namely navigation stack and modal views for the UI, @State, @Binding, @Published, and @StateObject for state management as well as data persistence and concurrency, and queues to handle asynchronous tasks.
+H.I.I.T. workout iOS app. Leverages SwiftUI and modern Swift development practices. Utilizes SwiftUI components namely navigation stack and modal views for the UI, @State, @Binding, @Published, and @StateObject annotations for state management as well as data persistence and concurrency, and queues to handle asynchronous tasks.
 
 <p align="center">
   <img src="/demo/iTrainer_icon_rounded.png" alt="rejuvenate_icon" width="125" height="125"/>
