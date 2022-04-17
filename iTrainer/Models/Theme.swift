@@ -26,12 +26,13 @@ enum Theme: String, CaseIterable, Identifiable, Codable { // these themes are de
     case tan
     case teal
     case yellow
+    case lime
     
     // choose accent color based on the base color --> this provides better contrast for the user 
     var accentColor: Color {
         switch self {
-        case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow: return .black
-        case .indigo, .magenta, .navy, .ocean, .oxblood, .purple: return .white
+        case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow, .ocean, .lime: return .black
+        case .indigo, .magenta, .navy, .oxblood, .purple: return .white
         }
     }
     var mainColor: Color {
